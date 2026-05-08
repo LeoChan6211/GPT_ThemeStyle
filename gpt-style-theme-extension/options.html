@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GPT Style Theme</title>
+
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="top">
+          <div>
+            <div style="font-size: 18px; font-weight: 650">GPT Style Theme 設定</div>
+            <div class="hint">
+              這些設定會自動套用到 <b>chatgpt.com</b> / <b>chat.openai.com</b>，重新整理也不會消失。
+            </div>
+          </div>
+          <div class="toggle">
+            <label for="enabled">啟用</label>
+            <input id="enabled" type="checkbox" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <label for="bg">背景 (bg)</label>
+          <input id="bg" type="color" />
+        </div>
+        <div class="row">
+          <label for="panel">面板 (panel)</label>
+          <input id="panel" type="color" />
+        </div>
+        <div class="row">
+          <label for="text">文字 (text)</label>
+          <input id="text" type="color" />
+        </div>
+        <div class="row">
+          <label for="muted">次要文字 (muted)</label>
+          <input id="muted" type="color" />
+        </div>
+        <div class="row">
+          <label for="border">邊線 (border)</label>
+          <input id="border" type="color" />
+        </div>
+        <div class="row">
+          <label for="link">連結 (link)</label>
+          <input id="link" type="color" />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <label for="codeTheme">程式碼高亮主題</label>
+          <div>
+            <select id="codeTheme"></select>
+            <div class="hint">套用在 ChatGPT 的 code block（CodeMirror 6 token 色彩）。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="display: flex; gap: 10px; align-items: center">
+        <button id="reset" class="btn">重設為預設</button>
+        <div id="status" class="hint"></div>
+      </div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

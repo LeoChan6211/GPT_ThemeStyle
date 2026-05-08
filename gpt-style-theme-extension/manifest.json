@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Style Theme (Extension)",
+  "version": "1.0.0",
+  "description": "Inject a mannual style theme into ChatGPT pages with adjustable colors.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "GPT Style Theme"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": [
+        "content/style.js",
+        "content/theme-presets.js",
+        "content/codemirror-theme.js",
+        "content/launcher.detect.js",
+        "content/launcher.view.js",
+        "content/launcher.state.js",
+        "content/launcher.main.js",
+        "content/disclaimer.js",
+        "content/main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
